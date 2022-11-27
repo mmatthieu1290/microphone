@@ -15,10 +15,10 @@ try:
     sound_file = AudioSegment.from_wav(wav_file)
     audio_chunks = split_on_silence(sound_file, min_silence_len=500, silence_thresh=-40 )
     for i, chunk in enumerate(audio_chunks):
-     out_file = "chuncks/chunk{0}.wav".format(i)
+     out_file = "chunk{0}.wav".format(i)
      chunk.export(out_file, format="wav")
-    for wave_sentence_name in os.listdir("chuncks/"): 
-     with sr.AudioFile(f"chuncks/{wave_sentence_name}") as source:
+    for wave_sentence_name in os.listdir(""): 
+     with sr.AudioFile(wave_sentence_name) as source:
       audio = r.listen(source)
      try:
       s = r.recognize_google(audio)
