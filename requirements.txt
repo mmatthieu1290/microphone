@@ -1,0 +1,2 @@
+pyaudio
+SpeechRecognition>=3.8.1
