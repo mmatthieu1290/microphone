@@ -31,4 +31,4 @@ try:
     st.write(sentences)
 
 except Exception as e:
-    st.write(e)  
+    st.write("Please upload wav file")  
