@@ -17,7 +17,7 @@ try:
     for i, chunk in enumerate(audio_chunks):
      out_file = "chunk{0}.wav".format(i)
      chunk.export(out_file, format="wav")
-    for wave_sentence_name in os.listdir(""): 
+    for wave_sentence_name in os.listdir(): 
      with sr.AudioFile(wave_sentence_name) as source:
       audio = r.listen(source)
      try:
